@@ -3,7 +3,7 @@ import {Button} from "@/components/ui/button";
 
 const HomePage = () => {
     return (
-        <div className="flex flex-col items-center justify-center h-screen">
+        <div className="flex min-h-screen home-wrapper">
             <Button>
                 Hello world
             </Button>
