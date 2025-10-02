@@ -1,6 +1,7 @@
 import React from 'react';
 import TradingViewWidget from "@/components/trading-view-widget";
 import {
+    HEATMAP_WIDGET_CONFIG,
     MARKET_DATA_WIDGET_CONFIG,
     MARKET_OVERVIEW_WIDGET_CONFIG,
     TOP_STORIES_WIDGET_CONFIG
@@ -24,7 +25,7 @@ const HomePage = () => {
                     <TradingViewWidget
                         title={"Stock Heatmap"}
                         scriptUrl={scriptUrl + "stock-heatmap.js"}
-                        config={MARKET_OVERVIEW_WIDGET_CONFIG}
+                        config={HEATMAP_WIDGET_CONFIG}
                         className={'custom-chart'}
                         height={600}
                     />

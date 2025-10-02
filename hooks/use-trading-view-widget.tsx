@@ -3,7 +3,7 @@
 import {useEffect, useRef} from "react";
 
 
-const UseTradingViewWidget = (scriptUrl: string, config: Record<string, unknown>, height = 600) => {
+const useTradingViewWidget = (scriptUrl: string, config: Record<string, unknown>, height = 600) => {
     const containerRef = useRef<HTMLDivElement | null>(null)
     useEffect(() => {
             if (!containerRef.current) return;
@@ -30,4 +30,4 @@ const UseTradingViewWidget = (scriptUrl: string, config: Record<string, unknown>
     );
     return containerRef
 }
-export default UseTradingViewWidget
+export default useTradingViewWidget
