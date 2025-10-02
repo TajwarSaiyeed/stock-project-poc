@@ -205,6 +205,19 @@ declare global {
         related?: string;
     };
 
+    type FinnhubStockProfile = {
+        name?: string;
+        ticker?: string;
+        exchange?: string;
+        marketCapitalization?: number;
+        shareOutstanding?: number;
+        logo?: string;
+        phone?: string;
+        weburl?: string;
+        ipo?: string;
+        finnhubIndustry?: string;
+    };
+
     type Alert = {
         id: string;
         symbol: string;
