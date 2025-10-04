@@ -6,6 +6,7 @@ import InputField from "@/components/forms/input-field";
 import SelectField from "@/components/forms/select-field";
 import {INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS} from "@/lib/constants";
 import {CountrySelectField} from "@/components/forms/country-select";
+import FooterLink from "@/components/forms/footer-link";
 
 const SignUpPage = () => {
 
@@ -21,7 +22,7 @@ const SignUpPage = () => {
         }, mode: "onBlur"
     },)
 
-    const onsubmit = async (data: SignUpFormData) => {
+    const onSubmit = async (data: SignUpFormData) => {
         try {
             console.log(data)
         } catch (e) {
@@ -35,7 +36,7 @@ const SignUpPage = () => {
             <h1 className={'form-title'}>
                 Sign Up & Personalize
             </h1>
-            <form onSubmit={handleSubmit(onsubmit)} className={'space-y-5'}>
+            <form onSubmit={handleSubmit(onSubmit)} className={'space-y-5'}>
                 <InputField
                     label={'Full Name'}
                     name={'fullName'}
@@ -53,11 +54,14 @@ const SignUpPage = () => {
                     placeholder={"e.g. support@stockprojectpoc.com"}
                     register={register}
                     error={errors.email}
+                    type={'email'}
                     validation={{
                         required: "Email is required",
                         minLength: 2,
-                        pattern: /^\w+@\w+\.\w+$/,
-                        message: "Invalid email address"
+                        pattern: {
+                            value: /^\S+@\S+\.\S+$/,
+                            message: "Invalid email address"
+                        }
                     }}
                 />
                 <InputField
@@ -114,6 +118,12 @@ const SignUpPage = () => {
                 <Button type={'submit'} disabled={isSubmitting} className={'yellow-btn w-full mt-5'}>
                     {isSubmitting ? 'Creating account' : 'Start Your Investing Journey'}
                 </Button>
+
+                <FooterLink
+                    text={"Already have an account?"}
+                    linkText={"Sign In"}
+                    href={'/sign-in'}
+                />
             </form>
         </>
     )
