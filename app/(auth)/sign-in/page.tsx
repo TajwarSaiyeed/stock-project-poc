@@ -35,6 +35,7 @@ const SignInPage = () => {
                     name={'email'}
                     placeholder={"e.g. support@stockprojectpoc.com"}
                     register={register}
+                    type={'email'}
                     error={errors.email}
                     validation={{
                         required: "Email is required",

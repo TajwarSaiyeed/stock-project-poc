@@ -54,6 +54,7 @@ const SignUpPage = () => {
                     placeholder={"e.g. support@stockprojectpoc.com"}
                     register={register}
                     error={errors.email}
+                    type={'email'}
                     validation={{
                         required: "Email is required",
                         minLength: 2,
