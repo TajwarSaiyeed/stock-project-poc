@@ -218,6 +218,16 @@ declare global {
         finnhubIndustry?: string;
     };
 
+    type UserForNewsEmail = {
+        id: string;
+        email: string;
+        name: string;
+        country: string;
+        investmentGoals?: string;
+        riskTolerance?: string;
+        preferredIndustry?: string;
+    };
+
     type Alert = {
         id: string;
         symbol: string;
