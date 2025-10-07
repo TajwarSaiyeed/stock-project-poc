@@ -1,0 +1,6 @@
+[[plugins]]
+package = "netlify-plugin-inngest"
+
+  [plugins.inputs]
+    host = "https://stock-project-poc.tajwar.app"
+    path = "/api/inngest"
